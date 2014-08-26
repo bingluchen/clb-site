@@ -8,8 +8,6 @@
         <property name="globalCache" value="false"></property>
     </bean>
 
-    <import resource="classpath:com/aifang/domain/adm/AdmDomainModuleContext.xml" />
-
     <context:component-scan base-package="com.aifang.app.adm" />
 
 

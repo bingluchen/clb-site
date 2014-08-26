@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="struts-backend" extends="struts-default"
+        abstract="true">
+        <default-interceptor-ref name="backendStack" />
+
+        <global-results>
+<!--             <result name="mobileLogin" type="redirect">${#request.mobileurl}</result> -->
+            <result name="login" type="redirect">${#request.url}</result>
+            <result name="noMethod">/error.jsp</result>
+            <result name="noPrivillege">/noPrivillege.jsp</result>
+            <result name="input">/error.jsp</result>
+        </global-results>
+    </package>
+
+    <package name="default" extends="struts-default" abstract="true">
+     <action name="**">
+        <result>/error.jsp</result>
+     </action>
+    </package>
+
+</struts>
