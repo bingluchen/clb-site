@@ -1,3 +1,5 @@
+.project
+*/.project
 RemoteSystemsTempFiles/
 .classpath
 .cache
