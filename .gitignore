@@ -8,7 +8,6 @@ target
 *.iml
 *.ipr
 *.iws
-pom.xml
 service-segment/data/aifang-chris.ser.gz
 service-segment/data/dict/*.dict
 service-segment/data/ctb
