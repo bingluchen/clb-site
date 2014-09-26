@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.clb.share.model.MyDemo;
+import com.clb.share.model.MysecondDemo;
 
 @RestController
 public class SecondAction {  
@@ -24,7 +25,7 @@ public class SecondAction {
     	try{
     		for(int i=0;i<10;i++){
     			MyDemo demo = new MyDemo();
-    			demo.setName("ÐÕÃû" + i);  
+    			demo.setName("ÐÕÃû" + i);
             	demo.setSex("ÄÐ"); 
             	demo.setWeigt(67.5+i*0.1);
             	demo.setHeugth(175.0+i*0.2);
@@ -52,6 +53,20 @@ public class SecondAction {
     	return demo;
     } 
   
+    @RequestMapping(value="second3",
+    method=RequestMethod.GET,produces={"application/xml", "application/json"})  
+    @ResponseStatus(HttpStatus.OK)
+    public MysecondDemo getDemo3() {
+    	MysecondDemo demo = new MysecondDemo();
+		try{
+			demo.setSecondName("jsonÐÕÃû");  
+		    demo.setSecondFlag("jsonFlag");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return demo;
+	}
+    
     @RequestMapping(value="second", method=RequestMethod.GET)  
     @ResponseStatus(HttpStatus.OK)  
     public String getDemoHtml() {  

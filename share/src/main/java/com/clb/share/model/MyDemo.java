@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.stereotype.Component;
 
+@Component("demo")
 @XmlRootElement
 public class MyDemo {
 
